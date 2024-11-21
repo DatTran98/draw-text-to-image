@@ -23,10 +23,12 @@ public class Main {
                 return;
             }
             BufferedImage image = ImageIO.read(inputStream);
+
             //convert image to base64 because in some cases we need to send image as base64 string in request body
             String base64Image = imageToBase64(image);
             String updatedBase64Image = addInfoToBase64Image(base64Image, infoMap);
 
+            // Save the image to the file system
             File file = new File("added_text_original_signature.png");
                 byte[] imageBytes = Base64.getDecoder().decode(updatedBase64Image);
                 BufferedImage bufferedImage = ImageIO.read(new ByteArrayInputStream(imageBytes));
