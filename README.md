@@ -59,3 +59,13 @@ From the image below, you can see the text added to the image.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Changelog
+All change logs for this project are documented in [changelog.md](changelog.md) file.
+
+## Authors
+- Dat Tran Ba
+- [Website](https://dattb.com)
+- [Github](https://github.com/DatTran98)
+- [Linkedin](https://www.linkedin.com/in/dat-tran-ba/)
+- [Facebook](https://www.facebook.com/dat.tbit)
