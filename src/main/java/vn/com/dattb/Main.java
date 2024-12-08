@@ -11,6 +11,10 @@ import static vn.com.dattb.utils.ImageTextUtils.imageToBase64;
 
 public class Main {
     public static void main(String[] args) {
+        testAddTextToImage();
+    }
+
+    private static void testAddTextToImage() {
         Map<String, String> infoMap = Map.of(
                 "Name", "Dat Tran Ba",
                 "Position", "Software Engineer",
@@ -30,16 +34,14 @@ public class Main {
 
             // Save the image to the file system
             File file = new File("added_text_original_signature.png");
-                byte[] imageBytes = Base64.getDecoder().decode(updatedBase64Image);
-                BufferedImage bufferedImage = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                try (FileOutputStream fos = new FileOutputStream(file)) {
-                    ImageIO.write(bufferedImage, "png", fos);
-                }
+            byte[] imageBytes = Base64.getDecoder().decode(updatedBase64Image);
+            BufferedImage bufferedImage = ImageIO.read(new ByteArrayInputStream(imageBytes));
+            try (FileOutputStream fos = new FileOutputStream(file)) {
+                ImageIO.write(bufferedImage, "png", fos);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 
 }
